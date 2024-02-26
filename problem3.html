@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>APi keys</title>
+    <style>
+        #parent{border: 2px solidred;
+        
+        
+        
+        }
+        #parent>p{padding-left: 300px;}
+        #parent>h2{padding-left: 300px;}
+    </style>
+</head>
+<body>
+<div id="parent">
+
+</div>
+</body>
+
+</html>
+<script>
+    let a=document.getElementById("parent")
+    fetch("http://www.omdbapi.com/?i=tt3896198&apikey=baf92771")
+    .then(function(one){
+return one.json()
+
+    })
+
+    .then(function(two){
+       
+let c1=document.createElement("h2")
+let c2=document.createElement("p")
+let c3=document.createElement("p")
+let c4=document.createElement("p")
+let c5=document.createElement("p")
+let c6=document.createElement("p")
+let c7=document.createElement("p")
+let c8=document.createElement("p")
+let c9=document.createElement("p")
+let c10=document.createElement("p")
+let c11=document.createElement("p")
+let c12=document.createElement("p")
+let c13=document.createElement("p")
+let c14=document.createElement("p")
+let c15=document.createElement("p")
+
+let c16=document.createElement("p")
+let c17=document.createElement("p")
+let c18=document.createElement("p")
+let c19=document.createElement("p")
+let c20=document.createElement("p")
+
+console.log(two)
+console.log(two.Title)
+
+c1.innerText="Title:"+two.Title
+c2.innerText="Year :"+two.Year
+c3.innerText="Rated:"+two.Rated
+c4.innerText="Actors:"+two.Actors
+c5.innerText="BoxOffice:"+two.BoxOffice
+c6.innerText="Country:"+two.Country
+c7.innerText="DVD:"+two.DVD
+c8.innerText="Director:"+two.Director
+c9.innerText= "GENRE:"+two.Genre
+
+c10.innerText="Language:"+two.Language
+
+c11.innerText="Metascore:"+two.Metascore
+c12.innerText="Plot:"+two.Plot
+c13.innerText="Poster:"+two.Poster
+
+c14.innerText="Production:"+two.Production
+c15.innerText="Released:"+two.Released
+c16.innerText="Type:"+two.Type
+c17.innerText="Writer:"+two.Writer
+c18.innerText="imdRated:"+two.imdRating
+
+a.append(c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18)
+
+
+
+    })
+</script>
